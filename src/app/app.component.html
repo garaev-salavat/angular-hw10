@@ -1,0 +1,17 @@
+<li>
+  <a
+    routerLink=""
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Главная</a
+  >
+</li>
+<li><a [routerLink]="['/about-my']">Обо мне</a></li>
+<li><a [routerLink]="['/my-projects']">Мои проекты</a></li>
+<li><button type="button" (click)="goAboutMy()">About My</button></li>
+<li><button type="button" (click)="goMyProjects()">My Projects</button></li>
+<li><button type="button" (click)="backPreviousPage()">Предыдущая страница</button></li>
+
+
+<hr>
+<router-outlet></router-outlet>
