@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +14,15 @@ export class AppComponent implements OnInit {
   previousPage: string = '';
   nextPage: string = '';
   currentPage: string ='';
+  history: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private location: Location) {
 
     this.router.events
     .pipe(filter(e => e instanceof RoutesRecognized))
     .pipe(pairwise())
     .subscribe((event: any[]) => {
-      console.log(event[0].urlAfterRedirects);
+      console.log(event);
       this.previousPage = event[0].urlAfterRedirects;
     });
 
@@ -39,6 +40,29 @@ export class AppComponent implements OnInit {
   }
 
   backPreviousPage() {
-      this.router.navigate([this.previousPage]);
+    this.location.back()
+  }
+
+  forwardPage(){
+    this.location.forward()
+
+  }
+
+  back(): void {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.back()
+    } else {
+      this.router.navigateByUrl('/')
+    }
+  }
+
+  forward() {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.forward()
+    } else {
+      this.router.navigateByUrl('/')
+    }
   }
 }

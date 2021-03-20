@@ -1,17 +1,42 @@
-<li>
-  <a
-    routerLink=""
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-    >Главная</a
-  >
-</li>
-<li><a [routerLink]="['/about-my']">Обо мне</a></li>
-<li><a [routerLink]="['/my-projects']">Мои проекты</a></li>
-<li><button type="button" (click)="goAboutMy()">About My</button></li>
-<li><button type="button" (click)="goMyProjects()">My Projects</button></li>
-<li><button type="button" (click)="backPreviousPage()">Предыдущая страница</button></li>
-
-
-<hr>
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="header"><h1>Курс: Angular 10+ Базовые знания</h1></div>
+      <nav>
+        <div class="nav-wrapper">
+          <!-- <a href="#" class="brand-logo right">Список студентов</a> -->
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+              <a
+                routerLink=""
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Главная</a
+              >
+            </li>
+            <li><a [routerLink]="['/about-my']">Обо мне</a></li>
+            <li><a [routerLink]="['/my-projects']">Мои проекты</a></li>
+            <li><a [routerLink]="['/recommended-reading']">Рекомендованная литература</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a><i class="material-icons">search</i></a>
+            </li>
+            <li>
+              <a (click)="backPreviousPage()"
+                ><i class="material-icons">arrow_back</i></a
+              >
+            </li>
+            <li>
+              <a (click)="forwardPage()"
+                ><i class="material-icons">arrow_forward</i></a
+              >
+            </li>
+            <!-- <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li> -->
+          </ul>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

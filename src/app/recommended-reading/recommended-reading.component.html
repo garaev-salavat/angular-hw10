@@ -1,0 +1,230 @@
+<br>
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 1. Введение в Angular </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/1.1.php">Что такое Angular. Первый проект</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/1.4.php">Построение проекта</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/1.2.php">Первое приложение</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/1.3.php">Первое приложение на JavaScript</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 2. Основы Angular </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.1.php">Компоненты</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.2.php">Модули</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.3.php">Загрузка приложения</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.4.php">Стили и шаблоны компонента</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.5.php">Привязка данных</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.6.php">Работа с компонентами</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.7.php">Взаимодействие между компонентами</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.10.php">Привязка к событиям дочернего компонента</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.8.php">Жизненный цикл компонента</a></p>
+      </li>
+      <li>
+        <p>
+          <a href="https://metanit.com/web/angular2/2.9.php">Шаблонные переменные, ViewChild, ContentChild</a>
+        </p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/2.11.php">Взаимодействие между модулями</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 3. Директивы </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.1.php">ngClass и ngStyle</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.2.php">Создание атрибутивных директив</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.3.php">Взаимодействие с пользователем, HostListener и HostBinding</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.4.php">Получение параметров в директивах</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.5.php">Структурные директивы ngIf, ngFor, ngSwitch</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/3.6.php">Создание структурных директив</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Глава 4. Сервисы и dependency injection
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/4.1.php">Сервисы</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/4.2.php">Внедрение сервиса в другой сервис</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/4.4.php">Опциональные сервисы</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/4.3.php">Один сервис для всех компонентов</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/4.5.php">Иерархия сервисов</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 5. Работа с формами </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/5.1.php">Модуль FormsModule и директива NgModel</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/5.2.php">Получение и изменение модели</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/5.3.php">Состояние модели и валидация</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/5.4.php">Директива NgForm</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/5.5.php">Reactive Forms</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Глава 6. HTTP и взаимодействие с сервером
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/6.1.php">HttpClient и отправка запросов</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/6.2.php">Объект Observable и библиотека RxJS</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/6.3.php">Обработка ошибок</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/6.4.php">Отправка данных в запросе</a></p>
+      </li>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/6.5.php">POST-запросы</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 7. Маршрутизация </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="https://metanit.com/web/angular2/7.1.php">Определение маршрутов</a></p>
+      </li>
+      <li>
+        <p><a href="7.2.php">Создание ссылок</a></p>
+      </li>
+      <li>
+        <p><a href="7.3.php">Параметры маршрута</a></p>
+      </li>
+      <li>
+        <p><a href="7.4.php">Параметры строки запроса</a></p>
+      </li>
+      <li>
+        <p><a href="7.5.php">Программная навигация</a></p>
+      </li>
+      <li>
+        <p><a href="7.6.php">Дочерние маршруты</a></p>
+      </li>
+      <li>
+        <p><a href="7.7.php">Guards</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 8. Pipes </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="8.1.php">Работа с pipes</a></p>
+      </li>
+      <li>
+        <p><a href="8.2.php">Создание своих pipes</a></p>
+      </li>
+      <li>
+        <p><a href="8.3.php">Pure и Impure Pipes</a></p>
+      </li>
+      <li>
+        <p><a href="8.4.php">AsyncPipe</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Глава 9. Дополнительные статьи </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ol>
+      <li>
+        <p><a href="9.1.php">Webpack</a></p>
+      </li>
+      <li>
+        <p><a href="9.2.php">Grid и CRUD-операции</a></p>
+      </li>
+    </ol>
+  </mat-expansion-panel>
+</mat-accordion>
+<p></p>
+
+
+

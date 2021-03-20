@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutMyComponent } from './about-my/about-my.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { RecommendedReadingComponent } from './recommended-reading/recommended-reading.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,12 @@ const routes: Routes = [
     component: MyProjectsComponent,
     loadChildren: () =>
       import('./my-projects/my-projects.module').then((file) => file.MyProjectsModule),
+  },
+  {
+    path: 'recommended-reading',
+    component: RecommendedReadingComponent,
+    loadChildren: () =>
+      import('./recommended-reading/recommended-reading.module').then((file) => file.RecommendedReadingModule),
   },
 ];
 
