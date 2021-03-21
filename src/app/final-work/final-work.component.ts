@@ -41,6 +41,7 @@ export class FinalWorkComponent implements OnInit, AfterViewInit {
     'title',
     'url',
     'userprofile',
+    "action"
   ];
 
   expandedElement: Issues | null;
