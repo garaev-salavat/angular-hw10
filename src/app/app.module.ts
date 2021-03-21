@@ -9,13 +9,11 @@ import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecommendedReadingModule } from './recommended-reading/recommended-reading.module';
 import { FinalWorkModule } from './final-work/final-work.module';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthorisationInterceptor } from './authorisation.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,10 +23,12 @@ import { FinalWorkModule } from './final-work/final-work.module';
     MaterialModule,
     BrowserAnimationsModule,
     RecommendedReadingModule,
-    FinalWorkModule
+    FinalWorkModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [],
 })
-export class AppModule { }
+export class AppModule {}

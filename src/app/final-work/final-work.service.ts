@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -9,6 +9,8 @@ import { Issue, Issues } from './issues.interface';
 })
 export class FinalWorkService {
   issues;
+
+  token = '9c5026e014ba68797d396097a7681d7b47b67a0e';
 
   constructor(private http: HttpClient) {}
 
@@ -28,12 +30,15 @@ export class FinalWorkService {
   }
 
   postUser(issue: Issue) {
-    console.log('=======================================');
-    console.log('Должна быть POST отправка. Теоритечески', issue.title, issue.body);
-    console.log('========================================');
-
+    const options = {
+      headers: new HttpHeaders().append('Authorization', 'Basic ' + btoa('garaev-salavat:' + this.token)),
+    }
     return this.http
-      .post('https://api.github.com/repos/garaev-salavat/angular-hw10/issues', {issue})
+      .post('https://api.github.com/repos/garaev-salavat/angular-hw10/issues', {
+        ...issue,
+        owner: 'garaev-salavat',
+        repo: 'angular-hw10',
+      }, options)
       .pipe(
         map((data) => {
           return data;

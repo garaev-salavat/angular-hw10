@@ -22,15 +22,19 @@
       <label>Описание</label>
       <input type="text" formControlName="body" />
     </p>
-
-    <code>{{ issueSendForm.value | json }}</code>
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button (click)="resetForm()">Clear</button>
   <button mat-button mat-dialog-close>Cancel</button>
 
-  <button mat-raised-button color="primary" (click)="send()" cdkFocusInitial>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="send()"
+    mat-dialog-close
+    cdkFocusInitial
+  >
     Save
   </button>
 </mat-dialog-actions>
