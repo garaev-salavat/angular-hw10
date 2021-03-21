@@ -11,9 +11,10 @@ import { RecommendedReadingModule } from './recommended-reading/recommended-read
 import { FinalWorkModule } from './final-work/final-work.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthorisationInterceptor } from './authorisation.interceptor';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, Page404Component],
   imports: [
     BrowserModule,
     AppRoutingModule,

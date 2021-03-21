@@ -3,6 +3,10 @@
     <button mat-fab style="margin: 5px" color="basic" (click)="openDialog()">
       <mat-icon>add</mat-icon>
     </button>
+
+    <button mat-fab style="margin: 5px" color="warn" (click)="refresh()">
+      <mat-icon>refresh</mat-icon>
+    </button>
   </div>
   <mat-table
     [dataSource]="dataSource"
@@ -10,12 +14,60 @@
     matSort
     class="mat-elevation-z8"
   >
-    <ng-container
-      matColumnDef="{{ column }}"
-      *ngFor="let column of displayedColumns"
-    >
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ column }}</th>
-      <td mat-cell *matCellDef="let element">{{ element.value[column] }}</td>
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>state</th>
+      <td mat-cell *matCellDef="let element">{{ element.value.state }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="created">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>created</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.value.created | date: "dd.MM.yyyy HH:mm" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>number</th>
+      <td style="text-align: center" mat-cell *matCellDef="let element">
+        {{ element.value.number }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>title</th>
+      <td mat-cell *matCellDef="let element">{{ element.value.title }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="url">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>url</th>
+      <td mat-cell *matCellDef="let element">
+        <a [href]="element.value.url"
+          ><img width="50" src="../../assets/github.png"
+        /></a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="userprofile">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>userprofile</th>
+      <td mat-cell *matCellDef="let element">
+        <a [href]="element.value.userprofile"
+          ><img width="50" src="../../assets/profile.jpg"
+        /></a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>action</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <button
+          mat-fab
+          style="margin: 5px"
+          color="primary"
+          (click)="replayDialog(element.value.number)"
+        >
+          <mat-icon>replay</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="expandedDetail">

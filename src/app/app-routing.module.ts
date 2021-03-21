@@ -4,6 +4,7 @@ import { AboutMyComponent } from './about-my/about-my.component';
 import { FinalWorkComponent } from './final-work/final-work.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { Page404Component } from './page404/page404.component';
 import { RecommendedReadingComponent } from './recommended-reading/recommended-reading.component';
 
 const routes: Routes = [
@@ -36,6 +37,15 @@ const routes: Routes = [
     component: FinalWorkComponent,
     loadChildren: () =>
       import('./final-work/final-work.module').then((file) => file.FinalWorkModule),
+  },
+  {
+    path: '404',
+    component: Page404Component,
+  },
+  {
+    path: '**',
+    redirectTo: '404',
+    pathMatch: 'full',
   },
 ];
 

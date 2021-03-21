@@ -1,0 +1,20 @@
+<p>replay-issue works!</p>
+
+<mat-form-field appearance="outline">
+  <input matInput type="text" [(ngModel)]="body" />
+</mat-form-field>
+
+<button
+  mat-fab
+  style="margin: 5px"
+  color="primary"
+  (click)="addComment()"
+
+  cdkFocusInitial
+>
+  <mat-icon>send</mat-icon>
+</button>
+
+<button mat-fab style="margin: 5px" color="warn" (click)="closeIssure()"   mat-dialog-close>
+  <mat-icon>delete</mat-icon>
+</button>
