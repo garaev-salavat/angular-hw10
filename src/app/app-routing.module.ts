@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMyComponent } from './about-my/about-my.component';
+import { FinalWorkComponent } from './final-work/final-work.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { RecommendedReadingComponent } from './recommended-reading/recommended-reading.component';
@@ -29,6 +30,12 @@ const routes: Routes = [
     component: RecommendedReadingComponent,
     loadChildren: () =>
       import('./recommended-reading/recommended-reading.module').then((file) => file.RecommendedReadingModule),
+  },
+  {
+    path: 'final-work',
+    component: FinalWorkComponent,
+    loadChildren: () =>
+      import('./final-work/final-work.module').then((file) => file.FinalWorkModule),
   },
 ];
 
